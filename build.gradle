@@ -34,6 +34,18 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-test {
+test { //запускает все тесты проекта
     useJUnitPlatform()
+    testLogging { //чуть изменили и теперь будет побольше всего выводиться в консоль
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task simple_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("simple") //запускаем тесты с тегом simple
+    }
 }
