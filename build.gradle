@@ -44,8 +44,14 @@ test { //запускает все тесты проекта
     }
 }
 
-task simple_test(type: Test) {
+task simple_test(type: Test) { //тип таски
     useJUnitPlatform {
         includeTags("simple") //запускаем тесты с тегом simple
+    }
+}
+
+task demoqa_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("demoqa")
     }
 }

@@ -1,6 +1,7 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
@@ -11,6 +12,7 @@ public class RegistrationTest extends TestBase {
 
     @DisplayName("Успешная регистрация с полным набором данных")
     @Test
+    @Tag("demoqa")
     void successfulRegistrationTest() {
         registrationPage.openPage()
                 .setFirstName(firstName)
