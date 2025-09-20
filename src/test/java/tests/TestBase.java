@@ -27,6 +27,7 @@ public class TestBase {
                 "enableVNC", true,
                 "enableVideo", true
         ));
+        Configuration.browserCapabilities = capabilities;
     }
 
     @BeforeEach
