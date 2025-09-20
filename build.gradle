@@ -50,8 +50,8 @@ task simple_test(type: Test) { //тип таски
     }
 }
 
-task demoqa_test(type: Test) {
+task demoqa_test(type: Test) { //просто название
     useJUnitPlatform {
-        includeTags("demoqa")
+        includeTags("demoqa") //название самого тега. должно быть идентично
     }
 }
